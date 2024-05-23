@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"../SASS/style.sass"
+	],
+	"sourcesContent": [
+		"* {\n\tmargin: 0;\n\tpadding: 0;\n\tbox-sizing: border-box;\n\n\tbody {\n\t\tfont-family: 'Roboto';\n\t\tfont-weight: 400;\n\t\tcolor: #777;\n\t\tfont-size: 16px;\n\t\tletter-spacing: 2px;\n\t\tpadding: 50px;\n\t\tbackground-color: white;\n\n\t\t.container {\n\t\t\tbackground-color: #F7F7F7;\n\t\t\t.header {\n\t\t\t\theight: 95vh;\n\t\t\t\tbackground: linear-gradient(90deg, rgba(186,133,84,0.7) .03%, rgba(1,1,1,0.7) 99.94%), url(../img/header-background.jpg) center / cover no-repeat;\n\t\t\t\tclip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%); } } } }\n"
+	],
+	"names": [],
+	"mappings": ";AAAA,AAAA,CAAC,CAAC;EACD,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CAgBuC;;;AAnB9D,AAKC,CALA,CAKA,IAAI,CAAC;EACJ,WAAW,EAAE,QAAQ;EACrB,WAAW,EAAE,GAAG;EAChB,KAAK,EAAE,IAAI;EACX,SAAS,EAAE,IAAI;EACf,cAAc,EAAE,GAAG;EACnB,OAAO,EAAE,IAAI;EACb,gBAAgB,EAAE,KAAK;CAOmC;;;AAnB5D,AAcE,CAdD,CAKA,IAAI,CASH,UAAU,CAAC;EACV,gBAAgB,EAAE,OAAO;CAI8B;;;AAnB1D,AAgBG,CAhBF,CAKA,IAAI,CASH,UAAU,CAET,OAAO,CAAC;EACP,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,gFAAyE,EAAE,iCAAiC,CAAC,YAAc,CAAC,SAAS;EACjJ,SAAS,EAAE,sCAAsC;CAAG"
+}
