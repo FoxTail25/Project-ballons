@@ -1,32 +1,66 @@
-*
+$color-gray: #777
+$color-brown-light: #ba8554
+$color-brown-dark: #A14F03
+$color-black: #000
+$color-white: #FFF
+
+$box-shadow: (0px 4px 4px rgba(0,0,0,.3))
+
+@mixin style-link($color)
+	display: inline-block
+	text-transform: uppercase
+	text-decoration: none
+	color: $color
+
+@function multiply($a, $b)
+	@return $a * $b
+
+// %button-style
+// 	@include style-link($color-gray)
+
+// 	background: $color-white
+// 	padding: 1.5rem 4rem
+// 	border-radius: 5rem
+// 	font-size: 2rem
+// 	transition: all .3s
+
+// 	position: relative
+
+*, ::after, ::before
 	margin: 0
 	padding: 0
 	box-sizing: border-box
+html
+	font-size: 62.5%
 
 body
 	font-family: 'Roboto', sans-serif
 	font-weight: 400
-	color: #777
-	font-size: 16px
-	letter-spacing: 2px
-	padding: 50px
-	background-color: white
+	color: $color-gray
+	font-size: 1.6rem
+	letter-spacing: .2rem
+	padding: 5rem
+	background-color: $color-white
 
 	.container
+		// background-color: darken(#F7F7F7, 30%)
+		// background-color: transparentize(#F7F7F7, .1)
+		// background-color: lighten(#F7F7F7, 30%)
 		background-color: #F7F7F7
+
 		.header
 			position: relative
 			height: 95vh
-			background: linear-gradient(90deg, rgba(186,133,84,0.7) .03%, rgba(1,1,1,0.7) 99.94%), url(../img/header-background.jpg) center / cover no-repeat
+			background: linear-gradient(90deg, rgba($color-brown-light,0.7) .03%, rgba($color-black,0.7) 99.94%), url(../img/header-background.jpg) center / cover no-repeat
 			// clip-path: polygon(0 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%)
 			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
 			&__logo
 				position: absolute
-				left: 50px
-				top: 50px
+				left: multiply(2.5, 2) * 1rem
+				top: 5rem
 
-				height: 70px
-				width: 56px
+				height: 7rem
+				width: 5.6rem
 			&__box
 				position: absolute
 				top: 40%
@@ -35,16 +69,16 @@ body
 				width: 100%
 				text-align: center
 .title-first
-	color: white
+	color: $color-white
 	span
 		display: block
 	&__main
 		text-transform: uppercase
 		font-weight: 800
-		font-size: 50px
-		line-height: 60px
-		letter-spacing: 10px
-		margin-bottom: 10px
+		font-size: 5rem
+		line-height: 6rem
+		letter-spacing: 1rem
+		margin-bottom: 1rem
 
 		animation-name: leftToRight
 		animation-duration: 1.7s
@@ -56,10 +90,10 @@ body
 
 	&__secondary
 		font-weight: 100
-		font-size: 40px
-		line-height: 48px
-		letter-spacing: 5px
-		margin-bottom: 65px
+		font-size: 4rem
+		line-height: 4.8rem
+		letter-spacing: .5rem
+		margin-bottom: 6.5rem
 
 		animation-name: rightToLeft
 		animation-duration: 1.7s
@@ -71,35 +105,35 @@ body
 
 .btn
 
-
 	&:link, &:visited
-		display: inline-block
-		text-transform: uppercase
-		text-decoration: none
-		color: #777
-		background: white
-		padding: 15px 40px
-		border-radius: 50px
+		// @extend %button-style
+
+		@include style-link($color-gray)
+
+		background: $color-white
+		padding: 1.5rem 4rem
+		border-radius: 5rem
+		font-size: 2rem
 		transition: all .3s
 
 		position: relative
 
 	&:hover
-		transform: translateY(-4px)
-		box-shadow: (0px 4px 4px rgba(0,0,0,.3))
+		transform: translateY(-.4rem)
+		box-shadow: $box-shadow
 		&::after
 			opacity: 0
 			transform: scaleX(1.5) scaleY(1.7)
 
 	&:active
-		transform: translateY(-2px)
-		box-shadow: (0px 4px 4px rgba(0,0,0,.1))
+		transform: translateY(-.2rem)
+		box-shadow: $box-shadow
 	&::after
 		content: ""
-		background: white
+		background: $color-white
 		width: 100%
 		height: 100%
-		border-radius: 50px
+		border-radius: 5rem
 		display: inline-block
 		position: absolute
 		top: 0
@@ -114,34 +148,40 @@ body
 
 	0%
 		opacity: 0
-		transform: translateX(-100px)
+		transform: translateX(-10rem)
+	50%
+		transform: translateY(-4rem)
 
 	80%
-		transform: translateX(10px)
+		transform: translateX(1rem)
 
 	100%
+		transform: translateY(0)
 		opacity: 1
-		transform: translateX(0px)
+		transform: translateX(0)
 
 @keyframes rightToLeft
 
 	0%
 		opacity: 0
-		transform: translateX(50px)
+		transform: translateX(5rem)
+	50%
+		transform: translateY(-3rem)
 
 	80%
-		transform: translateX(-10px)
+		transform: translateX(-1rem)
 
 	100%
 		opacity: 1
-		transform: translateX(0px)
+		transform: translateX(0)
+		transform: translatey(0)
 
 @keyframes BtnToUp
 
 	0%
 		opacity: 0
-		transform: translateY(50px)
+		transform: translateY(5rem)
 
 	100%
 		opacity: 1
-		transform: translateY(0px)
+		transform: translateY(0)
