@@ -1,0 +1,40 @@
+.btn
+
+	&:link, &:visited
+		// @extend %button-style
+
+		@include style-link($color-gray)
+
+		background: $color-white
+		padding: 1.5rem 4rem
+		border-radius: 5rem
+		font-size: 2rem
+		transition: all .3s
+
+		position: relative
+
+	&:hover
+		transform: translateY(-.4rem)
+		box-shadow: $box-shadow
+		&::after
+			opacity: 0
+			transform: scaleX(1.5) scaleY(1.7)
+
+	&:active
+		transform: translateY(-.2rem)
+		box-shadow: $box-shadow
+	&::after
+		content: ""
+		background: $color-white
+		width: 100%
+		height: 100%
+		border-radius: 5rem
+		display: inline-block
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1
+		transition: all .3s
+	&_animated
+		animation: BtnToUp .5s ease-in-out .7s
+		animation-fill-mode: backwards
