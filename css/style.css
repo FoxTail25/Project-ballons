@@ -228,6 +228,7 @@ body {
   position: absolute;
   z-index: 2;
   transition: all 0.2s;
+  outline-offset: 1rem;
 }
 .composition__photo_n1 {
   top: 0;
@@ -242,11 +243,32 @@ body {
   right: 10rem;
 }
 .composition__photo:hover {
+  outline: 1rem solid #ba8554;
   transform: scale(1.1);
   z-index: 10;
 }
 .composition:hover .composition__photo:not(:hover) {
   transform: scale(0.9);
+}
+
+.adventure-card {
+  padding: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.5rem;
+  bax-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: all 0.2s;
+}
+.adventure-card:hover {
+  transform: translateY(-1.5rem) scale(1.03);
+}
+.adventure-card__icon {
+  display: inline-block;
+  font-size: 6rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .row {
@@ -317,6 +339,15 @@ body {
 
 .section-about {
   padding-top: 8rem;
+}
+
+.section-adventure {
+  padding: 21rem 0rem;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url(../img/section-adventure.jpg) center/cover no-repeat;
+  transform: skewY(7deg);
+}
+.section-adventure > * {
+  transform: skewY(-7deg);
 }
 
 .container {
