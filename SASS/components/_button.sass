@@ -1,17 +1,17 @@
 
 // Это компонент кнопки
 .btn
-	&:link, &:visited
+	&, &:link, &:visited
 
 		@include style-link($color-gray)
 
 		background: $color-white
 		padding: 1.5rem 4rem
 		border-radius: 5rem
-		font-size: 2rem
 		transition: all .3s
-
 		position: relative
+		font-size: 2rem
+		border: none
 
 	&:hover
 		transform: translateY(-.4rem)
