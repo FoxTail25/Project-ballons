@@ -203,6 +203,14 @@ body {
   animation-fill-mode: backwards;
 }
 
+.btn_brown, .btn_brown:link, .btn_brown:visited {
+  background: #A14F03;
+  color: #FFF;
+}
+.btn_brown::after {
+  background: #A14F03;
+}
+
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
   letter-spacing: 0.2rem;
@@ -463,6 +471,9 @@ body {
 .form__group:not(:last-child) {
   margin-bottom: 2rem;
 }
+.form__group:nth-child(4) {
+  margin-bottom: 4rem;
+}
 .form__input {
   font-size: 1.6rem;
   letter-spacing: 0.2rem;
@@ -473,7 +484,7 @@ body {
   border: none;
   border-bottom: 0.3rem solid transparen;
   border-radius: 0.5rem;
-  width: 55%;
+  width: 75%;
 }
 .form__input:focus {
   outline: none;
@@ -603,6 +614,22 @@ body {
   text-align: center;
 }
 
+.footer {
+  padding: 8rem;
+  background: #333333;
+}
+.footer__logo {
+  width: 12rem;
+}
+.footer__list {
+  list-style: none;
+}
+.footer__item {
+  display: inline-block;
+}
+.footer__item:not(last-child) {
+  margin-right: 5rem;
+}
 .section-about {
   padding-top: 8rem;
   margin-bottom: 20rem;
