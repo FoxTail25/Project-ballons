@@ -3,9 +3,9 @@
 	background: #333333
 	&__logo
 		width: 12rem
-
 	&__list
 		list-style: none
+		text-align: center
 	&__item
 		display: inline-block
 		&:not(last-child)
@@ -19,6 +19,11 @@
 			font-size: $font-size-paragraph
 			letter-spacing: .2rem
 			font-weight: 300
+			display: inline-block
+			transition: .3s
 
 		&:active
 		&:hover
+			transform: rotate(5deg) scale(1.2)
+			color: $color-brown-dark
+			text-shadow: $shadow-secondary-h2
