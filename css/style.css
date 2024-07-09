@@ -700,7 +700,7 @@ body {
   right: 0;
   z-index: 150;
   opacity: 0;
-  transition: 0.1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  transition: 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 .navigation__list {
   position: absolute;
