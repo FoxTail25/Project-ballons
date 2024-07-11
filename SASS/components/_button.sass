@@ -12,6 +12,11 @@
 		position: relative
 		font-size: 2rem
 		border: none
+		@include respond(tab-land)
+			font-size: 1.6rem
+			padding: 1.5rem 3.7rem
+		@include respond(tab-land)
+			padding: 2rem 5rem
 
 	&:hover
 		transform: translateY(-.4rem)
