@@ -498,8 +498,18 @@ body {
   padding: 6rem;
   transform: skewX(330deg);
 }
+@media (max-width: 900px) {
+  .feedBack-card {
+    transform: skewX(350deg);
+  }
+}
 .feedBack-card > * {
   transform: skewX(-330deg);
+}
+@media (max-width: 900px) {
+  .feedBack-card > * {
+    transform: skewX(-350deg);
+  }
 }
 .feedBack-card__img {
   width: 15rem;
@@ -940,4 +950,4 @@ body {
 
 .container {
   background-color: #F7F7F7;
-}
+}/*# sourceMappingURL=style.css.map */
