@@ -1,10 +1,9 @@
 .card-tour
 	height: 50rem
-	// perspective: 150rem
 	-webkit-perspective: 150rem
 	position: relative
 	@include respond(tab-port)
-	height: 60rem
+		height: auto
 
 	&__side
 		height: 50rem
@@ -19,14 +18,29 @@
 		border-radius: .5rem
 		overflow: hidden
 		@include respond(tab-port)
-		height: 60rem
+			height: auto
+			position: relative
+
 		&_front
+			@include respond(tab-port)
+				padding-bottom: 12rem
 
 		&_back
 			background: linear-gradient(120deg, $color-brown-light, $color-brown-dark )
 			transform: rotateY(180deg)
+			@include respond(tab-port)
+				transform: rotateY(0deg)
+				padding: 5rem
+				padding-top: 12rem
+				margin-top: -12rem
+				clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%)
+
 	&:hover &__side_front
 		transform: rotateY(-180deg)
+		@include respond(tab-port)
+			transform: rotateY(0deg)
+
+			// position: relative
 	&:hover &__side_back
 		transform: rotateY(0deg)
 	&__img
@@ -82,14 +96,22 @@
 				&:not(:last-child)
 					margin-bottom: 2rem
 				@include respond(tab-land)
-				font-size: 1.5rem
+					font-size: 1.5rem
 				@include respond(tab-port)
-				font-size: 2rem
+					font-size: 2rem
 	&__backSide-box
 		position: absolute
 		top: 50%
 		left: 50%
 		transform: translate(-50%, -50%)
+		@include respond(tab-port)
+			position: relative
+			top: 0%
+			left: 0%
+			transform: translate(0%, 0%)
+			padding: 5rem
+			text-align: center
+
 	&__text
 		margin-bottom: 8rem
 		letter-spacing: .2rem
