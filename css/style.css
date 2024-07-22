@@ -839,7 +839,7 @@ body {
 }
 @media (min-resolution: 192dpi) and (min-width: 670px), (min-width: 1340px) {
   .header {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0.03%, rgba(255, 255, 255, 0.7) 99.94%), url(../img/header-background-big.jpg) center/cover no-repeat;
+    background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url(../img/header-background-big.jpg) center/cover no-repeat;
   }
 }
 .header__logo {
