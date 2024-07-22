@@ -2,7 +2,7 @@
 	height: 50rem
 	-webkit-perspective: 150rem
 	position: relative
-	@include respond(tab-port)
+	@media only screen and (max-width: 900px), (hover:none)
 		height: auto
 
 	&__side
@@ -17,20 +17,20 @@
 		box-shadow: $box-shadow
 		border-radius: .5rem
 		overflow: hidden
-		@include respond(tab-port)
+		@media only screen and (max-width: 900px), (hover:none)
 			height: auto
 			position: relative
 
 		&_front
-			@include respond(tab-port)
+			@media only screen and (max-width: 900px), (hover:none)
 				padding-bottom: 12rem
 
 		&_back
 			background: linear-gradient(120deg, $color-brown-light, $color-brown-dark )
 			transform: rotateY(180deg)
-			@include respond(tab-port)
+			@media only screen and (max-width: 900px), (hover:none)
 				transform: rotateY(0deg)
-				padding: 5rem
+				// padding: 5rem
 				padding-top: 12rem
 				margin-top: -12rem
 				clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%)
@@ -53,7 +53,7 @@
 			background: $color-brown-light url(../img/card-2.jpg) center / cover no-repeat
 		&_3
 			background: $color-brown-light url(../img/card-3.jpg) center / cover no-repeat
-		@include respond(tab-port)
+		@media only screen and (max-width: 900px), (hover:none)
 			height: 30rem
 
 	&__title
@@ -104,7 +104,7 @@
 		top: 50%
 		left: 50%
 		transform: translate(-50%, -50%)
-		@include respond(tab-port)
+		@media only screen and (max-width: 900px), (hover:none)
 			position: relative
 			top: 0%
 			left: 0%
